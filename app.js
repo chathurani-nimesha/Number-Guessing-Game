@@ -26,3 +26,15 @@ function checkGuess(){
     }
 }
 
+//Start new game
+function resetGame(){
+    randomNumber=Math.floor(Math.random()*100)+1;
+    attempts=0;
+
+    document.getElementById("attempts").textContent="0";
+
+    document.getElementById("message").textContent="New game started!";
+
+    document.getElementById("guessInput").value="";
+}
+
