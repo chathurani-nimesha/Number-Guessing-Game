@@ -12,3 +12,14 @@ body{
     justify-content: center;
     align-items: center;
 }
+
+.game-container{
+    background-color: white;
+    width: 400px;
+    padding: 40px;
+
+    text-align: center;
+    border-radius: 15px;
+
+    box-shadow:0 10px 30px rgba(0, 0, 0, 0.2) ;
+}
