@@ -10,7 +10,20 @@ function checkGuess(){
     const guess=Number(guessInput.value);
 
     if(guess<1||guess>100 || guessInput.value===""){
-        message.textContent="Please enter a number between 1 and 100.";
+         Swal.fire({
+        title: "Please enter a number between 1 and 100.",
+        width: 600,
+        padding: "3em",
+        color: "#fa5ded",
+        background: "#fff",
+        backdrop: `
+            rgba(0,0,123,0.4)
+            url("videos/monsters-inc-look-at-those-numbers.gif")
+            center center
+            / cover
+            no-repeat
+        `
+    });
         return;
     }
 
@@ -18,7 +31,12 @@ function checkGuess(){
     attemptsDisplay.textContent=attempts;
 
     if(guess===randomNumber){
-        message.textContent=`Correct! The Number was ${randomNumber}.`;
+        Swal.fire({
+        title:`Correct! The Number was ${randomNumber}`,
+        icon: "success",
+        draggable: true
+        });
+        
     }else if(guess<randomNumber){
         message.textContent="Too low! Try a higher number.";
     }else{
